@@ -14,9 +14,19 @@ import lombok.NoArgsConstructor;
 public class Customer{
     private String id;
     private String name;
-    private short sex;    //0:男  1:女
+    private int number;    //0:男  1:女
 
     public static int compareName(Customer a, Customer b){
         return a.getName().compareTo(b.getName());
+    }
+
+    public double getBigNumber(){
+        double a = Math.tan(Math.log(number) * Math.sqrt(number));
+        for (int i = 0; i < 100; i++) {
+            a += Math.sin(a);
+            a *= Math.log(a);
+            a /= Math.cos(a);
+        }
+        return a;
     }
 }

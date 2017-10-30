@@ -1,5 +1,6 @@
 package com.xiaozhi.test.Lambda;
 
+
 import com.google.common.collect.Lists;
 
 import java.util.Arrays;
@@ -18,6 +19,8 @@ public class TestMain{
         //对象的实例方法
         Customer[] customers = (Customer[]) customerList.toArray();
         Arrays.sort(customers, (a, b) -> provider.compareByAge(a, b));
+        Arrays.sort(customers, (a, b) -> Customer.compareName(a, b));
+
 
         Arrays.sort(customers, new Comparator<Customer>(){
             @Override
@@ -26,8 +29,10 @@ public class TestMain{
             }
         });
 
-        Arrays.sort(customers, (a, b) -> Customer.compareName(a, b));
+
         //使用方法引用
+        Arrays.sort(customers, Customer::compareName);
+        customerList.stream().mapToInt(Customer::getNumber);
         Arrays.sort(customers, provider::compareByName);
     }
 }

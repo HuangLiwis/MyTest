@@ -19,5 +19,11 @@ public class LambdaTest{
 
         Runnable r1 = () -> System.out.println("Hello Lambda!");
         MyRunnable r2 = () -> System.out.println("Hello Lambda!");
+
+        Customer customer = new Customer();
+        int a = 1;
+        Runnable r = () -> {
+            System.out.println("Hello Lambda!");
+        };
     }
 }
