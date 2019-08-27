@@ -6,6 +6,6 @@ package com.xiaozhi.test.git;
 public class GitRecord {
 
     public static void main(String[] args) {
-
+        System.out.println("dev第二次提交");
     }
 }
