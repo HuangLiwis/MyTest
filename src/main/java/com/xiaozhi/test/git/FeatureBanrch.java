@@ -9,5 +9,6 @@ public class FeatureBanrch {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("commit1");
+        System.out.println("commit2");
     }
 }
