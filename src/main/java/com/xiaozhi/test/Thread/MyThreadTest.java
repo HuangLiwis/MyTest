@@ -1,6 +1,7 @@
 package com.xiaozhi.test.Thread;
 
 
+import java.sql.SQLOutput;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -34,5 +35,6 @@ public class MyThreadTest {
         } finally {
             isRunning = false;
         }
+        System.out.println("----");
     }
 }
