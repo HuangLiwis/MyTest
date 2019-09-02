@@ -53,5 +53,6 @@ public class Time {
         String a =
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date(1510815338L));
         System.out.println(a);
+        System.out.println();
     }
 }
