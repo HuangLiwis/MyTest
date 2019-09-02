@@ -9,7 +9,5 @@ public class GitRecord {
         System.out.println("dev第二次提交");
         System.out.println("");
         System.out.println("");
-        System.out.println("");
-        System.out.println("");
     }
 }
