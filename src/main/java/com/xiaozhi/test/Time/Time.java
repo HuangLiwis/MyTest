@@ -55,5 +55,7 @@ public class Time {
         System.out.println(a);
         System.out.println();
         System.out.println();
+        System.out.println();
+        System.out.println();
     }
 }
