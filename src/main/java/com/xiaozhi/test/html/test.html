@@ -49,8 +49,39 @@
 
 
 ---------------------------------------
-<table>
-
+<table width="100%" style="text-align: left;float: left" align="left" >
+    <tr>
+        <th width="5%">接口</th>
+        <th width="10%">类</th>
+        <th width="20%">属性</th>
+        <th width="25%">特性</th>
+        <th width="15%">线程安全</th>
+        <th width="15%">常见注意问题</th>
+        <td width="10%">比较</td>
+    </tr>
+    <tr>
+        <td rowspan="3">List</td>
+        <td>ArrayList</td>
+        <td>初始大小：10<br>扩容：1.5倍<br>存储：Object[]</td>
+        <td>顺序存储<br>随机访问快速<br>不易插入和删除某元素，需要执行数组拷贝</td>
+        <td>不安全，fail-fast机制，可用Collections.synchronizedList(list)实现，其原理为给各个方法加对象锁（iterator()和listIterator()方法除外）</td>
+        <td>subList()方法得到的是原list的试图，对某一方的修改会导致另一方的改变</td>
+        <td rowspan="3">Vector的同步由synchronized修饰方法实现，而Collections.synchronizedList(list)实现同步为synchronized锁对象成代码块来调用原list对应方法，安全上后者更好但不用方法间也存在竞争</td>
+    </tr>
+    <tr>
+        <td>LinkedList</td>
+        <td>双向链表</td>
+        <td>链表存储<br>方便插入删除操作<br>不能随机访问<br>遍历慢<br>有实现Queue接口，可当顺序队列使用</td>
+        <td>不安全，fail-fast机制，安全实现同ArrayList(同上)</td>
+        <td>subList问题（同上）</td>
+    </tr>
+    <tr>
+        <td>Vector</td>
+        <td>初始大小：10<br>扩容：如果构造函数传入扩容增量则为（原长度+增量）否则为（原长度*2），<br>存储：Object[]</td>
+        <td>同ArrayList<br>有子类Stack</td>
+        <td>安全，实现为所有方法增加synchronized关键字，其不保证多线程调不同方法出现错误。思考同步方法和同步代码块</td>
+        <td>subList问题（同上）</td>
+    </tr>
 </table>
 </body>
 </html>
