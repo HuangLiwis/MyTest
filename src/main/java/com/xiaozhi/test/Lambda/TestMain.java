@@ -48,4 +48,17 @@ public class TestMain {
         customerList.stream().mapToInt(Customer::getNumber);
         Arrays.sort(customers, provider::compareByName);
     }
+
+    public void print() {
+        if (new Object() {
+            boolean print() {
+                System.out.print("a");
+                return false;
+            }
+        }.print()) {
+            System.out.print("a");
+        } else {
+            System.out.print("b");
+        }
+    }
 }
