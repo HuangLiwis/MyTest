@@ -7,5 +7,7 @@ public class GitRecord {
 
     public static void main(String[] args) {
         System.out.println("dev第二次提交");
+        System.out.println("");
+        System.out.println("");
     }
 }

@@ -1,5 +1,11 @@
 package com.xiaozhi.test.string;
 
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import javax.sound.midi.Soundbank;
+import com.google.common.collect.Lists;
 /**
  * Created by huangzh on 2017/11/16.
  */
@@ -19,6 +25,7 @@ public class StringTest {
                 "\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n" +
                 "\tat java.lang.Thread.run(Thread.java:748)";
 
-        System.out.println(a.substring(0,100));
+        String b="2019-06-10 18:25:28.0";
+        System.out.println(b.substring(0,19));
     }
 }
