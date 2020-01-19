@@ -10,6 +10,7 @@
 
     <properties>
         <lombok.version>1.16.10</lombok.version>
+        <org.springframework.version>5.1.5.RELEASE</org.springframework.version>
     </properties>
 
 
@@ -40,6 +41,18 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.6.Final</version>
+        </dependency>
+
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework.version}</version>
         </dependency>
     </dependencies>
 
