@@ -32,6 +32,7 @@ public class ReentrantLockTest {
         System.out.println("start:" + money.moneyCount);
         ReentrantLockTest reentrantLockTest = new ReentrantLockTest();
 
+
         for (int i = 0; i < 100; i++) {
             new Thread(() -> reentrantLockTest.reduceMoney(money)).start();
         }
