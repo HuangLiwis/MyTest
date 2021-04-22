@@ -29,11 +29,11 @@ public class ListTest {
         names.add("5");
         names.add("6");
 
-        List<String> list = names.subList(1, 2);
-        System.out.println(list);
-        list.remove(0);
-        System.out.println(list);
-        System.out.println(names);
+//        List<String> list = names.subList(1, 2);
+//        System.out.println(list);
+//        list.remove(0);
+//        System.out.println(list);
+//        System.out.println(names);
 
         //        for (String name : names) {
 //            if (name.equals("2")) {
@@ -52,17 +52,13 @@ public class ListTest {
 //                names.remove(i);
 //            }
 //        }
-        System.out.println(names);
-        ArrayLinkedList arrayLinkedList;
-        Vector vector;
-        LinkedList linkedList;
-        HashSet set;
-        Stack stack;
-        TreeSet treeSet;
-        HashMap hashMap;
-        Hashtable hashtable;
-        LinkedHashMap linkedHashMap;
-        LinkedHashSet linkedHashSet;
-        ConcurrentHashMap concurrentHashMap;
+      int[] a={1,3,4,5,6};
+      quickSort(a,0,a.length);
+        for (int i : a) {
+            System.out.println(a);
+        }
+    }
+
+    private static void quickSort(int[] a, int i, int length) {
     }
 }

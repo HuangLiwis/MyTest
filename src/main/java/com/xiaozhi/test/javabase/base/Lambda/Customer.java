@@ -1,6 +1,5 @@
 package com.xiaozhi.test.javabase.base.Lambda;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,12 +10,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer{
+public class Customer {
+
     private String id;
+
     private String name;
+
     private int number;    //0:男  1:女
 
-    public static int compareName(Customer a, Customer b){
+    public static int compareName(Customer a, Customer b) {
         return a.getName().compareTo(b.getName());
     }
 
@@ -26,6 +28,11 @@ public class Customer{
             a += Math.sin(a);
             a *= Math.log(a);
             a /= Math.cos(a);
+        }
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return a;
     }
